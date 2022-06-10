@@ -20,9 +20,9 @@ application.use(function( error, request, response, next ) {
 
 })
 
-application.listen(() => {
+application.listen(process.env.PORT, () => {
 
-	console.log(`Application ${process.pid} started.`)
+	console.log(`Application ${process.pid} started on port ${ process.env.PORT }.`)
 
 })
 
